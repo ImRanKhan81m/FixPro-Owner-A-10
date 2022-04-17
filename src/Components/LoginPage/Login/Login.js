@@ -1,11 +1,13 @@
 import React, { useRef } from 'react';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Button, Col, Form, Row, Toast } from 'react-bootstrap';
+import { Button, Col, Form, Row } from 'react-bootstrap';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import SocialLogin from '../Authentication/SocialLogin';
 import Loading from '../../Loading/Loading';
 import { async } from '@firebase/util';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const emailRef = useRef('');
@@ -33,9 +35,7 @@ const Login = () => {
     if (error) {
         errorElement = <p className='text-danger'>Incorrect username or password.</p>
     }
-    if (loading) {
-        return <Loading />
-    }
+    
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -45,12 +45,17 @@ const Login = () => {
         signInWithEmailAndPassword(email, password)
     }
 
-    const resetPassword = async () =>{
+    const resetPassword = async () => {
         const email = emailRef.current.value;
-        if(email){
+        if (email) {
             await sendPasswordResetEmail(email);
-            Toast('Sent email');
+            toast('Sent email');
+        } else {
+            toast('Please enter your email address.')
         }
+    }
+    if (loading, sending) {
+        return <Loading />
     }
 
     return (
@@ -78,6 +83,7 @@ const Login = () => {
                         <p>New Customer? <span onClick={navigateRegister} className='text-primary' style={{ cursor: 'pointer' }}> Register Now</span></p>
                         <p>Forgot Password? <span onClick={resetPassword} className='text-primary' style={{ cursor: 'pointer' }}>Reset</span></p>
                         <SocialLogin />
+                        <ToastContainer />
                     </div>
                 </Col>
                 <Col lg='6' ></Col>
