@@ -14,13 +14,10 @@ const Register = () => {
         createUserWithEmailAndPassword,
         user,
         loading,
-        error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
 
-    if(loading){
-        return <Loading/>
-    } 
+
     const navigateLogin = () => {
         navigate('/login')
     }
@@ -30,9 +27,11 @@ const Register = () => {
         const name = (event.target.name.value);
         const email = (event.target.email.value);
         const password = (event.target.password.value);
-
         await createUserWithEmailAndPassword(email, password);
         navigate('/')
+    }
+    if (loading) {
+        return <Loading />
     }
 
     return (
