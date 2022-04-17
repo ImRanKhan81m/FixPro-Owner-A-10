@@ -4,6 +4,7 @@ import { Button, Col, Form, Row } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import Loading from '../../Loading/Loading';
 import SocialLogin from '../Authentication/SocialLogin';
 
 const Register = () => {
@@ -16,6 +17,10 @@ const Register = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
 
+
+    if(loading){
+        return <Loading/>
+    } 
     const navigateLogin = () => {
         navigate('/login')
     }

@@ -7,6 +7,7 @@ import Blog from './Components/Blog/Blog';
 import Login from './Components/LoginPage/Login/Login';
 import ServiceDetail from './Components/ServiceDetail/ServiceDetail';
 import Register from './Components/LoginPage/Register/Register';
+import Loading from './Components/Loading/Loading';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='/about' element={<About/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
+        <Route path='/loading' element={<Loading/>}/>
       </Routes>
     </div>
   );
