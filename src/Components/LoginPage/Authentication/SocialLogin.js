@@ -12,14 +12,14 @@ const SocialLogin = () => {
                 <div style={{ height: '1px' }} className='bg-dark w-50 me-5 ms-3'></div>
             </div>
             <div>
-                <div className='mb-3 '>
+                <div className='mb-3'>
                     <Button
                         style={{ fontSize: '20px', backgroundColor: '#F2F3F5' }} className='btn btn-light px-4 py-2 w-75'>
                         <Row>
-                            <Col lg='4' md='3' className='text-end'>
+                            <Col lg='4' md='5' sm='2' className='text-end'>
                                 <img src={googleLogo} alt="" />
                             </Col>
-                            <Col lg='8' md='9' className='text-start'>
+                            <Col lg='8' md='9' sm='10' className='text-start'>
                                 <span className='px-2'>Google Sign In</span>
                             </Col>
                         </Row>
@@ -30,10 +30,10 @@ const SocialLogin = () => {
                     <Button
                         style={{ fontSize: '20px', backgroundColor: '#F2F3F5' }} className='btn btn-light px-4 py-2 w-75'>
                         <Row>
-                            <Col lg='4' md='3' className='text-end'>
+                            <Col lg='4' md='3' sm='2' className='text-end'>
                                 <img src={githubLogo} alt="" />
                             </Col>
-                            <Col lg='8' md='9' className='text-start'>
+                            <Col lg='8' md='9' sm='10' className='text-start'>
                                 <span className='px-2'>Github Sign In</span>
                             </Col>
                         </Row>

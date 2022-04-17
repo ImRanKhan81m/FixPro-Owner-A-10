@@ -6,6 +6,7 @@ import About from './Components/About/About';
 import Blog from './Components/Blog/Blog';
 import Login from './Components/LoginPage/Login/Login';
 import ServiceDetail from './Components/ServiceDetail/ServiceDetail';
+import Register from './Components/LoginPage/Register/Register';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/blog' element={<Blog/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/login' element={<Login/>}/>
+        <Route path='/register' element={<Register/>}/>
       </Routes>
     </div>
   );
