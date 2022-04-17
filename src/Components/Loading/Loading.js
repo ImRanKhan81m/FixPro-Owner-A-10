@@ -3,7 +3,7 @@ import { Button, Spinner } from 'react-bootstrap';
 
 const Loading = () => {
     return (
-        <div style={{ height: '50vh' }} className='d-flex justify-content-center align-items-center'>
+        <div style={{ height: '80vh' }} className='d-flex justify-content-center align-items-center'>
             <div>
                 <>
                     <Button variant="primary" disabled>

@@ -16,24 +16,24 @@ const Header = () => {
             <Navbar className='shadow-sm py-2' collapseOnSelect expand="lg" sticky='top' bg="light" variant="light">
                 <Container>
                     <Navbar.Brand as={Link} to="/">
-                        <span style={{ fontSize: '25px' }}>Fixpro Owner</span>
+                        <h1 style={{ fontSize: '25px' }}>Fixpro Owner</h1>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav style={{ fontSize: '18px', color: 'white' }} className="ms-auto">
-                            <Nav.Link href="/#services">Services</Nav.Link>
-                            <Nav.Link href="/#gallery">Gallery</Nav.Link>
-                            <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
-                            <Nav.Link as={Link} to="/about">About</Nav.Link>
+                            <Nav.Link style={{color:'black'}} href="/#services">Services</Nav.Link>
+                            <Nav.Link style={{color:'black'}} href="/#gallery">Gallery</Nav.Link>
+                            <Nav.Link style={{color:'black'}} as={Link} to="/blog">Blog</Nav.Link>
+                            <Nav.Link style={{color:'black'}} as={Link} to="/about">About</Nav.Link>
                         </Nav>
                         <Nav>
                             {
                                 user ?
-                                    <Nav.Link onClick={handleSignOut}>
+                                    <Nav.Link style={{color:'black'}} onClick={handleSignOut}>
                                         Log Out
                                     </Nav.Link>
                                     :
-                                    <Nav.Link as={Link} to="login">
+                                    <Nav.Link style={{color:'black'}} as={Link} to="login">
                                         Login
                                     </Nav.Link>
                             }

@@ -1,14 +1,15 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import homeimage from '../../images/home-img.svg'
+import homeimage from '../../images/gallery/front-view-man-troubleshooting-computer.jpg'
+import './HomePage.css'
 
 const HomePage = () => {
     return (
         <div>
-            <Container>
+            <Container className='home-container pt-lg-5 mt-5'>
                 <Row>
-                    <Col lg='6'sm='12' order='2'>
-                        <div>
+                    <Col lg='6'sm='12' order='2' className=''>
+                        <div className='homepage d-flex align-items-center'>
                             <img src={homeimage} alt="" />
                         </div>
                     </Col>
