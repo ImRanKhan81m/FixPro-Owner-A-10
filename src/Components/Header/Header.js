@@ -5,14 +5,14 @@ import { Link } from 'react-router-dom';
 const Header = () => {
     return (
         <>
-            <Navbar collapseOnSelect expand="lg" sticky='top' bg="primary" variant="dark">
+            <Navbar className='shadow-sm py-2' collapseOnSelect expand="lg" sticky='top' bg="light" variant="light">
                 <Container>
                     <Navbar.Brand as={Link} to="/">
-                        <span>Fixpro Owner</span>
+                        <span style={{fontSize:'25px'}}>Fixpro Owner</span>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="ms-auto">
+                        <Nav  style={{fontSize:'18px', color:'white'}} className="ms-auto">
                             <Nav.Link href="home#services">Services</Nav.Link>
                             <Nav.Link href="home#gallery">Gallery</Nav.Link>
                             <Nav.Link as={Link} to="/blog">Blog</Nav.Link>

@@ -5,6 +5,7 @@ import Header from './Components/Header/Header';
 import About from './Components/About/About';
 import Blog from './Components/Blog/Blog';
 import Login from './Components/LoginPage/Login/Login';
+import ServiceDetail from './Components/ServiceDetail/ServiceDetail';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Header/>
       <Routes>
         <Route path='/' element={<Home/>}/>
+        <Route path='/service/:serviceId' element={<ServiceDetail/>}/>
         <Route path='/blog' element={<Blog/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/login' element={<Login/>}/>
