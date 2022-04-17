@@ -1,14 +1,33 @@
+import { async } from '@firebase/util';
 import React, { useState } from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
+import auth from '../../../firebase.init';
 import SocialLogin from '../Authentication/SocialLogin';
 
 const Register = () => {
     const [agree, setAgree] = useState(false);
     const navigate = useNavigate();
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useCreateUserWithEmailAndPassword(auth);
 
     const navigateLogin = () => {
         navigate('/login')
+    }
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        const name = (event.target.name.value);
+        const email = (event.target.email.value);
+        const password = (event.target.password.value);
+
+        await createUserWithEmailAndPassword(email, password);
+        navigate('/')
     }
 
     return (
@@ -18,7 +37,7 @@ const Register = () => {
                 <Col lg='3'></Col>
                 <Col lg='6'>
                     <div className=' border mt-4'>
-                        <Form className='text-start p-4 mt-4'>
+                        <Form onSubmit={handleSubmit} className='text-start p-4 mt-4'>
                             <Form.Group className="mb-3" controlId="formBasicName">
                                 <Form.Label>Your Name</Form.Label>
                                 <Form.Control type="text" name='name' placeholder="Enter your name" required />
@@ -35,11 +54,10 @@ const Register = () => {
                             </Form.Group>
                             <Form.Group className="mb-3 d-flex" controlId="formBasicCheckbox">
                                 <Form.Check className='me-2' onClick={() => setAgree(!agree)} name='terms' id='terms' type="checkbox" />
-                        <label className={agree ? 'text-primary' : 'text-danger'} htmlFor="terms">Accept  Terms and Conditions </label>
-                                {/* <label className={`ps-2 ${agree ? '' : 'text-danger'}`} htmlFor="terms">Accept  Terms and Conditions </label> */}
+                                <label className={agree ? 'text-primary' : 'text-danger'} htmlFor="terms">Accept Terms and Conditions </label>
                             </Form.Group>
                             <Button
-                               disabled ={!agree}
+                                disabled={!agree}
                                 style={{ fontSize: '18px' }} className='w-100 py-2' variant="primary" type="submit">
                                 Register
                             </Button>
