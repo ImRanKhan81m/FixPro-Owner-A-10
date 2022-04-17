@@ -16,7 +16,7 @@ const Services = () => {
         <div>
             <Container className='py-5' id='services'>
                 <h1 className='mt-5'>My Services</h1>
-                <div className='services-section'>
+                <div className='services-section mt-4'>
                     {
                         services.map(service =>
                             <Service

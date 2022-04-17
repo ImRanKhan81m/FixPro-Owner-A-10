@@ -9,6 +9,8 @@ import Register from './Components/LoginPage/Register/Register';
 import Loading from './Components/Loading/Loading';
 import Checkout from './Components/CheckOut/Checkout';
 import RequireAuth from './Components/LoginPage/RequireAuth/RequireAuth';
+import NotFound from './Components/NotFound/NotFound';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
@@ -26,7 +28,9 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
         <Route path='/loading' element={<Loading />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
+      <Footer/>
     </div>
   );
 }

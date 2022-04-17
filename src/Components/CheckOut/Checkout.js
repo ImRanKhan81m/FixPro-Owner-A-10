@@ -1,17 +1,24 @@
 import React from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import auth from '../../firebase.init';
+import Loading from '../Loading/Loading';
+import './Checkout.css'
 
 const Checkout = () => {
+    const [loading] = useAuthState(auth);
 
-
+    if(loading){
+        <Loading/>
+    }
     const handleSubmit = event => {
         event.preventDefault();
-        toast('Thanks for confirm booking!')
+        toast('Thanks for confirm booking!');
     }
     return (
-        <div className='register-form container py-5'>
+        <div className='checkout container py-5'>
             <h2>Booking Information</h2>
             <Row>
                 <Col lg='3'></Col>

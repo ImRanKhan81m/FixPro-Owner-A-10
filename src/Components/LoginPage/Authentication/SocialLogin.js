@@ -39,10 +39,10 @@ const SocialLogin = () => {
                         onClick={() => signInWithGoogle()}
                         style={{ fontSize: '20px', backgroundColor: '#F2F3F5' }} className='btn btn-light px-4 py-2 w-75'>
                         <Row>
-                            <Col lg='4' md='5' sm='2' className='text-end'>
+                            <Col lg='4' md='3' sm='6' className='text-end '>
                                 <img src={googleLogo} alt="" />
                             </Col>
-                            <Col lg='8' md='9' sm='10' className='text-start'>
+                            <Col lg='8' md='9' sm='6' className='text-start'>
                                 <span className='px-2'>Google Sign In</span>
                             </Col>
                         </Row>
