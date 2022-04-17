@@ -1,5 +1,16 @@
-.services-section{
+.services-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
+}
+
+@media only screen and (max-width: 770px) {
+    .services-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (max-width: 500px) {
+    .services-section {
+        grid-template-columns: 1fr;
+    }
 }

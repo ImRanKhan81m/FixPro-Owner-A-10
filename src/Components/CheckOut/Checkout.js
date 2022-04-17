@@ -1,11 +1,14 @@
 import React from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Checkout = () => {
 
 
     const handleSubmit = event => {
         event.preventDefault();
+        toast('Thanks for confirm booking!')
     }
     return (
         <div className='register-form container py-5'>
@@ -43,6 +46,7 @@ const Checkout = () => {
                                 Confirm Booking
                             </Button>
                         </Form>
+                        <ToastContainer/>
                     </div>
                 </Col>
                 <Col lg='3'></Col>

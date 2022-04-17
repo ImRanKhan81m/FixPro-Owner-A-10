@@ -15,7 +15,7 @@ const Services = () => {
     return (
         <div>
             <Container className='py-5' id='services'>
-                <h1 className='mt-5'>Services:{services.length}</h1>
+                <h1 className='mt-5'>My Services</h1>
                 <div className='services-section'>
                     {
                         services.map(service =>

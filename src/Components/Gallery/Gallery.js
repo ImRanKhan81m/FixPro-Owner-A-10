@@ -10,7 +10,7 @@ import './Gallery.css'
 const Gallery = () => {
     return (
         <>
-            <h1 className='mt-5 mb-3 pt-5'>Gallery</h1>
+            <h1 className='mt-5 mb-3 pt-5'>My Gallery</h1>
             <div className='gallery container mb-5' id='gallery'>
                 <img src={img1} alt="" />
                 <img src={img2} alt="" />
