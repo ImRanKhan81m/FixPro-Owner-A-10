@@ -3,42 +3,42 @@
         "id": 1,
         "name": "Computer Repair",
         "price": "3500$",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "Repair guides and disassembly information for PC laptops of all shapes, sizes, and colors. PC Laptop troubleshooting, repair, and service manuals.",
         "img": "./service-1.svg"
     },
     {
         "id": 2,
         "name": "Laptop Repair",
         "price": "2480$",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "Repair guides and disassembly information for PC laptops of all shapes, sizes, and colors. PC Laptop troubleshooting, repair, and service manuals.",
         "img": "./service-2.svg"
     },
     {
         "id": 3,
         "name": "Smartphone Repair",
         "price": "2150$",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "Repair guides and disassembly information for phones from all manufacturers and service providers, including Apple iPhone and Samsung Galaxy.",
         "img": "./service-3.svg"
     },
     {
         "id": 4,
         "name": "Game Console Repair",
         "price": "1290$",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "Complete disassembly and installation guides for most game consoles manufactured since 1986. Game Console troubleshooting, repair, and service manuals.",
         "img": "./service-4.svg"
     },
     {
         "id": 5,
         "name": "Multi Meadia Repair",
         "price": "1600$",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "Freeware video repair / audio repair. Media_Repair will attempt to repair files encrypted by STOP/DJVU ransomware variants by making the ...",
         "img": "./service-5.svg"
     },
     {
         "id": 6,
         "name": "Smartwatch Repair",
         "price": "950$",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa",
+        "description": " Comprehensive guides and support for a wide range of wearables including the Apple Watch, Android Wear powered watches, Fitbits, and more ...",
         "img": "./service-6.svg"
     }
 ]
