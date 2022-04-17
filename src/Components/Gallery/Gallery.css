@@ -1,9 +1,23 @@
-.gallery{
+.gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
 }
-.gallery img{
+
+.gallery img {
     width: 100%;
     border-radius: 15px;
+}
+
+@media only screen and (max-width: 770px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
 }
