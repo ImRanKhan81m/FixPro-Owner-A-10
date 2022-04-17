@@ -5,7 +5,6 @@ import Header from './Components/Header/Header';
 import About from './Components/About/About';
 import Blog from './Components/Blog/Blog';
 import Login from './Components/LoginPage/Login/Login';
-import ServiceDetail from './Components/ServiceDetail/ServiceDetail';
 import Register from './Components/LoginPage/Register/Register';
 import Loading from './Components/Loading/Loading';
 import Checkout from './Components/CheckOut/Checkout';
