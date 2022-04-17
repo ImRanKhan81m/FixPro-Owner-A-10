@@ -1,10 +1,11 @@
 import React, { useRef } from 'react';
-import {useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Button, Col, Form, Row } from 'react-bootstrap';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { Button, Col, Form, Row, Toast } from 'react-bootstrap';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import SocialLogin from '../Authentication/SocialLogin';
 import Loading from '../../Loading/Loading';
+import { async } from '@firebase/util';
 
 const Login = () => {
     const emailRef = useRef('');
@@ -12,25 +13,28 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || "/";
-        const [
-            signInWithEmailAndPassword,
-            user,
-            loading,
-            error,
-          ] = useSignInWithEmailAndPassword(auth);
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(
+        auth
+    );
 
     const navigateRegister = () => {
         navigate('/register')
     }
     if (user) {
         navigate(from, { replace: true })
-    } 
+    }
     let errorElement;
-    if(error){
+    if (error) {
         errorElement = <p className='text-danger'>Incorrect username or password.</p>
     }
-    if(loading){
-        return <Loading/>
+    if (loading) {
+        return <Loading />
     }
 
     const handleSubmit = event => {
@@ -39,6 +43,14 @@ const Login = () => {
         const password = passwordRef.current.value;
 
         signInWithEmailAndPassword(email, password)
+    }
+
+    const resetPassword = async () =>{
+        const email = emailRef.current.value;
+        if(email){
+            await sendPasswordResetEmail(email);
+            Toast('Sent email');
+        }
     }
 
     return (
@@ -64,7 +76,7 @@ const Login = () => {
                         </Form>
                         {errorElement}
                         <p>New Customer? <span onClick={navigateRegister} className='text-primary' style={{ cursor: 'pointer' }}> Register Now</span></p>
-                        <p>Forgot Password? <span className='text-primary' style={{ cursor: 'pointer' }}>Reset</span></p>
+                        <p>Forgot Password? <span onClick={resetPassword} className='text-primary' style={{ cursor: 'pointer' }}>Reset</span></p>
                         <SocialLogin />
                     </div>
                 </Col>
