@@ -37,13 +37,7 @@ const Login = () => {
     }
     
 
-    const handleSubmit = event => {
-        event.preventDefault();
-        const email = emailRef.current.value;
-        const password = passwordRef.current.value;
-
-        signInWithEmailAndPassword(email, password)
-    }
+    
 
     const resetPassword = async () => {
         const email = emailRef.current.value;
@@ -54,8 +48,15 @@ const Login = () => {
             toast('Please enter your email address.')
         }
     }
-    if (loading, sending) {
+    if (loading || sending) {
         return <Loading />
+    }
+    const handleSubmit = event => {
+        event.preventDefault();
+        const email = emailRef.current.value;
+        const password = passwordRef.current.value;
+
+        signInWithEmailAndPassword(email, password)
     }
 
     return (

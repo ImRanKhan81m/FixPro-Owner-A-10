@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Service.css'
 
 const Service = ({service}) => {
@@ -17,7 +17,9 @@ const Service = ({service}) => {
             <h3>{name}</h3>
             <h4><b>Price:</b> {price}</h4>
             <p>{description}</p>
-            <Button onClick={()=> navigateToServiceDetail(id)} >Book Now</Button>
+            <Link to="/checkout">
+                <Button className='btn btn-primary' >Book Now</Button>
+            </Link>
         </div>
     );
 };
