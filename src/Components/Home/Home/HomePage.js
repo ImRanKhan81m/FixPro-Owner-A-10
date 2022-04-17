@@ -16,7 +16,7 @@ const HomePage = () => {
                         <div>
                             <h2>Why Fix It Yourself Leave It To The Pros.</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam harum molestiae voluptatem quia unde sequi incidunt laudantium commodi tempora quis!</p>
-                            <button className='btn btn-primary'>Get Started</button>
+                            <button href="#service" className='btn btn-primary'>Get Started</button>
                         </div>
                     </Col>
                 </Row>
