@@ -17,7 +17,7 @@ const About = () => {
                         <div className='text-start'>
                              <h3><b>Name:</b> MD Imran Hossen</h3>
                              <h3><b>Age:</b> 21</h3>
-                             <p><b>Goal:</b> I want to be a Full-Stack Web Developer.  I have a passion for learning and sharing my knowledge with others as publicly as possible. I love to solve real-world problems. I am strategic, goal-oriented, and always work with an end goal in mind.  I enjoy working with include ReactJS and JavaScript. In the future I will learn more Programming Language.</p>
+                             <p><b>Goal:</b> I want to be a Full-Stack Web Developer.  I have a passion for learning and sharing my knowledge with others as publicly as possible. I love to solve real-world problems. I am strategic, goal-oriented, and always work with an end goal in mind.  I enjoy working with include ReactJS and JavaScript. In the future I will learn more Programming Language. As a Web Developer I want to work with big organizations in the IT sector at home and abroad.</p>
 
                         </div>
                     </Col>
