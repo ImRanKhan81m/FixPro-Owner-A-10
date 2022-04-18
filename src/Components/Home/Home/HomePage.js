@@ -13,7 +13,7 @@ const HomePage = () => {
                             <img src={homeimage} alt="" />
                         </div>
                     </Col>
-                    <Col  lg='6' sm='12' order='1' className='d-flex align-items-center'>
+                    <Col  lg='6' sm='12' order='1' className='d-flex align-items-center mt-3 mt-lg-0'>
                         <div>
                             <h2>Why Fix It Yourself Leave It To The Pros.</h2>
                             <p>Free Repair Evaluation. Free Warranties On All US Sales And Repairs. Buy A Refurbished Unit Today Or Get Your Unit Repaired Fast By House Tech Staff. Servo Drive Sales Repair. Industrial Sales. Backed With Warranties. General Electric.</p>
