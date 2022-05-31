@@ -36,8 +36,7 @@ const SocialLogin = () => {
             <div>
                 <div className='mb-3'>
                     <Button
-                        onClick={() => signInWithGoogle()}
-                        style={{ fontSize: '20px', backgroundColor: '#F2F3F5' }} className='btn btn-light px-4 py-2 w-75'>
+                        onClick={() => signInWithGoogle()} className='btn btn-light px-4 py-2 w-75'>
                         <Row>
                             <Col lg='4' md='3' sm='6' className='text-end '>
                                 <img src={googleLogo} alt="" />
@@ -51,8 +50,7 @@ const SocialLogin = () => {
 
                 <div className='mb-3 '>
                     <Button
-                        onClick={() => signInWithGithub()}
-                        style={{ fontSize: '20px', backgroundColor: '#F2F3F5' }} className='btn btn-light px-4 py-2 w-75'>
+                        onClick={() => signInWithGithub()} className='btn btn-light px-4 py-2 w-75'>
                         <Row>
                             <Col lg='4' md='3' sm='2' className='text-end'>
                                 <img src={githubLogo} alt="" />
